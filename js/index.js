@@ -1,18 +1,16 @@
+let myChart;
 window.onload = function () {
  // based on prepared DOM, initialize echarts instance
  var canvas = document.getElementById('test');
  canvas.width = window.innerWidth;
  canvas.height = window.innerHeight;
  
- var myChart = echarts.init(canvas);
+ myChart = echarts.init(canvas);
  myChart.showLoading();
  $.get('https://ecomfe.github.io/echarts-examples/public/data/asset/data/webkit-dep.json', function (webkitDep) {
     myChart.hideLoading();
 
     option = {
-        legend: {
-            data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
-        },
         series: [{
             type: 'graph',
             layout: 'force',
@@ -48,4 +46,5 @@ window.onresize = function(event) {
  var canvas = document.getElementById('test');
  canvas.width = window.innerWidth;
  canvas.height = window.innerHeight;
+ myChart.resize()
 };
