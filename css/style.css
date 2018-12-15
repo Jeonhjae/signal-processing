@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   min-height:100vh;
+  background-color: #2A2738;
 }
 ol, ul {
   list-style: none;
@@ -54,5 +55,12 @@ table {
   width: 100vw; 
   display: block;
 }
-
+.top-menu{
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  width: 85%;
+  padding: 1% 8%;
+  background-color: #2A2738;
+}
 * { margin:0; padding:0; }
