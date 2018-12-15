@@ -3,7 +3,7 @@ window.onload = function () {
  var myChart = echarts.init(document.getElementById('test'));
  myChart.showLoading();
  
-$.get('data/asset/data/les-miserables.gexf', function (xml) {
+$.get('https://ecomfe.github.io/echarts-examples/public/data/asset/data/les-miserables.gexf', function (xml) {
     myChart.hideLoading();
 
     var graph = echarts.dataTool.gexf.parse(xml);
