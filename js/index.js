@@ -39,7 +39,8 @@ window.onload = function () {
     };
 
     myChart.setOption(option);
-});
+  });
+  
 }
 
 window.onresize = function(event) {
