@@ -1,6 +1,10 @@
 window.onload = function () {
  // based on prepared DOM, initialize echarts instance
- var myChart = echarts.init(document.getElementById('test'));
+ var canvas = document.getElementById('test');
+ canvas.width = window.innerWidth;
+ canvas.height = window.innerHeight;
+ 
+ var myChart = echarts.init(canvas);
  myChart.showLoading();
  $.get('https://ecomfe.github.io/echarts-examples/public/data/asset/data/webkit-dep.json', function (webkitDep) {
     myChart.hideLoading();
@@ -39,3 +43,9 @@ window.onload = function () {
     myChart.setOption(option);
 });
 }
+
+window.onresize = function(event) {
+ var canvas = document.getElementById('test');
+ canvas.width = window.innerWidth;
+ canvas.height = window.innerHeight;
+};
