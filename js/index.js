@@ -2,26 +2,71 @@ window.onload = function () {
  // based on prepared DOM, initialize echarts instance
  var myChart = echarts.init(document.getElementById('test'));
  myChart.showLoading();
- 
-$.get('https://ecomfe.github.io/echarts-examples/public/data/asset/data/les-miserables.gexf', function (xml) {
+ let data = [{
+  category: 0
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "12"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ }, {
+  category: 0
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "13"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ }, {
+  category: 0
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "14"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ }, {
+  category: 0
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "15"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ }, {
+  category: 1
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "26"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ },{
+  category: 1
+  draggable: false
+  id: "1"
+  itemStyle: null
+  name: "64"
+  symbolSize: 10
+  value: 10
+  x: null
+  y: null
+ }
+]
     myChart.hideLoading();
 
-    var graph = echarts.dataTool.gexf.parse(xml);
-    var categories = [];
-    for (var i = 0; i < 9; i++) {
-        categories[i] = {
-            name: '类目' + i
-        };
-    }
-    graph.nodes.forEach(function (node) {
-        node.itemStyle = null;
-        node.symbolSize = 10;
-        node.value = node.symbolSize;
-        node.category = node.attributes.modularity_class;
-        // Use random x, y
-        node.x = node.y = null;
-        node.draggable = true;
-    });
+   
     option = {
         title: {
             text: 'Les Miserables',
