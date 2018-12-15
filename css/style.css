@@ -62,4 +62,13 @@ table {
   width: 85%;
   padding: 1% 8%;
 }
+.top-menu li{
+  color: white;
+  font-size: 20px;
+  display: inline;
+  margin-right: 20px;
+}
+.top-menu li a{
+ text-decoration: none;
+}
 * { margin:0; padding:0; }
