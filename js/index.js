@@ -46,5 +46,8 @@ window.onresize = function(event) {
  var canvas = document.getElementById('test');
  canvas.width = window.innerWidth;
  canvas.height = window.innerHeight;
- myChart.resize()
+ myChart.resize({
+  width: window.innerWidth,
+  height: window.innerHeight
+ })
 };
